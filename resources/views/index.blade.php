@@ -67,14 +67,15 @@
         
         </div>
 
-        @if($message = Session::get('success'))
+  @if($message = Session::get('success'))
   <div class="alert alert-success">
   <p>{{ $message}}</p>
   </div>
   @endif
 
 
-        <div class="card" style="margin-top: 5%;">
+ 
+          <div class="card" style="margin-top: 5%;">
             <div class="card-body">
                 <h5 class="card-title">Users</h5>
                 <table class="table table-striped">
@@ -102,18 +103,18 @@
                     <td>{{ $user->country }}</td>
                     
       <!-- modal start -->              
-     <div class= "modal fade" id="edit-modal-{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class= "modal fade" id="edit-modal-{{$user->id}}" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
     <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+    <h5 class="modal-title">Modal title</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="close">
     <span aria-hidden="true">&times;</span>
     </button>
     </div>
 <form action="{{ route('user.update',$user->id) }}" method="post" id="editform">
    @csrf
-{{ method_field('POST') }}
+
 <div class="modal-body">
 
     <div class="form-group">
@@ -149,8 +150,8 @@
     <input type="text" name="state" id="state" value="{{$user->state}}" class="form-control" placeholder="State">
     </div>
     @error('state')
-                    <span>{{$message}}</span>
-                    @enderror
+    <span>{{$message}}</span>
+    @enderror
     <div class="form-group">
     <label>Country</label>
     <input type="text" name="country" id="country" value="{{$user->country}}" class="form-control" placeholder="Country">
@@ -167,12 +168,13 @@
      </div>
      </div>
      </div>
+
      <!-- End modal -->
      <td>
         <a class="btn btn-primary" style="margin-right:5%" data-toggle="modal" data-target="#edit-modal-{{$user->id}}" >Edit</a>
         <form action="{{ route('user.destroy',$user->id) }}" method="post">
     {{csrf_field() }}
-    {{ method_field('DELETE') }}
+
                     <button  class="btn btn-danger">Delete</button>
                     <form>
                     </td>

@@ -39,6 +39,7 @@ class UserController extends Controller
        return redirect()->route('user.index')->with('success','User has been registered'); 
        }
 
+    
         //update user
         public function update(Request $request,Register $user)
         {
