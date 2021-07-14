@@ -12,7 +12,11 @@
   </head>
   <body>
     
-    <div class="container" style="padding-top: 1%;">
+  <div  style="padding-top: 1%; float:right; padding-right:10%;">
+  <a href="{{ route('logout') }}" class="btn btn-primary">Logout</a>
+  </div>
+    
+    <div class="container" style="padding-top: 5%;">
         <div class="card">
             <div class="card-body col-md-12">
                 <h5 class="card-title">Add user</h5>
@@ -58,7 +62,7 @@
                     @enderror
 
                     <div class="col" style="padding-top: 1%;">
-                        <button style="float: right;" type="submit" class="btn btn-primary">Submit</button>
+                        <button style="float: right" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     
                 </div>
