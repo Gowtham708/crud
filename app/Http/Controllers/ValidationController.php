@@ -20,8 +20,8 @@ use App\Jobs\SentEmails;
 class ValidationController extends Controller
 {
     //
-   public function _construct(Page $page){
-      $this->page = $page;
+   public function _construct(Page $user){
+      $this->user = $user;
    }
 
    public function login(){
