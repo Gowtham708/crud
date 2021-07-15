@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use App\User;
 use Illuminate\Support\Facades\Input;
-use App\Http\Controllers\newPassword;
+
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
 use App\Jobs\SentEmailJob;
